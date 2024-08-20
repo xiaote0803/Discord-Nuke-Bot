@@ -15,3 +15,15 @@
 1. 安裝[Python](https://www.python.org/downloads/)。
 2. 設定`config.json`。
 ## 設定選項
+- `token` Discord機器人Token
+- `channel_name` 頻道名稱
+- `role_name` 身分組名稱
+- `server_name` 新的伺服器名稱
+- `webhook_name` webhook名稱
+- `webhook_message` webhook傳送的訊息
+- `bot_message` 機器人本身傳送的訊息
+- `icon_path` 伺服器圖標路徑
+- `del_roles` 是否刪除所有身分組(True/False)
+## 注意事項
+1. **身分組過多可能會耗費大量時間。**
+2. **伺服器圖標路徑使用"/"**(※"C:/Users/user/Desktop/image.png")

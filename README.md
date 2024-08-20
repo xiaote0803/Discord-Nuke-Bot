@@ -1,8 +1,16 @@
 # Discord-Nuker
-一個Discord炸群機器人
-### 使用方法
-1.```pip install discord```
-
-2.更改`config.sjon`設定機器人
-
-3.運行`bot.py`
+一個Discord的炸群機器人
+## 功能:
+1. `大量創建頻道`
+2. `大量發送訊息`
+3. `大量創建身分組`
+4. `刪除所有頻道`
+5. `刪除所有身分組`
+6. `刪除所有貼圖`
+7. `刪除所有伺服器模板`
+8. `停權其他機器人`
+9. `更改伺服器名稱`
+10. `更改伺服器圖標`
+## 前置作業
+1. 安裝[Python](https://www.python.org/downloads/)。
+2. 設定`config.json`。

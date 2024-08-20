@@ -1,5 +1,5 @@
-# Discord-Nuker
-一個Discord的炸群機器人
+# Discord Nuker
+一個 Discord 的炸群機器人
 ## 主要功能
 - `大量創建頻道`
 - `大量發送訊息`
@@ -13,9 +13,10 @@
 - `更改伺服器圖標`
 ## 前置作業
 1. 安裝[Python](https://www.python.org/downloads/)。
-2. 設定`config.json`。
+2. 安裝 Discord 套件```pip install discord```。
+5. 設定`config.json`。
 ## 設定選項
-- `token` Discord機器人Token
+- `token` Discord 機器人的 Token
 - `channel_name` 頻道名稱
 - `role_name` 身分組名稱
 - `server_name` 新的伺服器名稱
@@ -26,4 +27,4 @@
 - `del_roles` 是否刪除所有身分組(True/False)
 ## 注意事項
 1. **身分組過多可能會耗費大量時間。**
-2. **伺服器圖標路徑使用"/"**(※"C:/Users/user/Desktop/image.png")
+2. **伺服器圖標路徑使用"/"**(※"C:/Users/user/Desktop/image.png")。

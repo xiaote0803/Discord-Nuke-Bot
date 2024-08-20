@@ -3,7 +3,7 @@
 ## 主要功能
 - `大量創建頻道`
 - `大量發送訊息`
-- `大量創建身分組`**(彩色)**
+- `大量創建身分組` **(彩色)**
 - `刪除所有頻道`
 - `刪除所有身分組`
 - `刪除所有貼圖`
@@ -12,9 +12,9 @@
 - `更改伺服器名稱`
 - `更改伺服器圖標`
 ## 前置作業
-1. 安裝[Python](https://www.python.org/downloads/)。
-2. 安裝 Discord 套件```pip install discord```。
-5. 設定`config.json`。
+1. 安裝 [Python](https://www.python.org/downloads/)。
+2. 安裝 Discord 套件 ```pip install discord``` 。
+5. 設定 `config.json` 。
 ## 設定選項
 - `token` Discord 機器人的 Token
 - `channel_name` 頻道名稱
@@ -27,6 +27,6 @@
 - `del_roles` 是否刪除所有身分組(True/False)
 ## 注意事項
 1. 伺服器身分組過多可能會耗費**較多時間**刪除。
-2. 伺服器圖標路徑請使用"C:/Users/user/Desktop/image.png"的格式。
+2. 伺服器圖標路徑請使用 "C:/Users/user/Desktop/image.png" 的格式。
 ## 程式參考
-部分程式參考 https://github.com/imyimang/discord-nuke-bot
+部分程式參考 https://github.com/imyimang/discord-nuke-bot 。

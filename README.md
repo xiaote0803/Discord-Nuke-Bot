@@ -1,6 +1,6 @@
 # Discord-Nuker
 一個Discord的炸群機器人
-## 功能:
+## 主要功能
 1. `大量創建頻道`
 2. `大量發送訊息`
 3. `大量創建身分組`
@@ -14,3 +14,4 @@
 ## 前置作業
 1. 安裝[Python](https://www.python.org/downloads/)。
 2. 設定`config.json`。
+## 設定選項

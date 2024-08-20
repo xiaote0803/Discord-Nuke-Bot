@@ -28,3 +28,5 @@
 ## 注意事項
 1. 身分組過多可能會耗費**大量時間**刪除。
 2. 伺服器圖標路徑**使用"/"**  ※C:/Users/user/Desktop/image.png。
+## 程式參考
+部分程式參考 https://github.com/imyimang/discord-nuke-bot

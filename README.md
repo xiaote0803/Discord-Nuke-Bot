@@ -28,5 +28,6 @@
 ## 注意事項
 1. 伺服器身分組過多可能會耗費**較多時間**刪除。
 2. 伺服器圖標路徑請使用 "C:/Users/user/Desktop/image.png" 的格式。
+3. `@everyone`和`@here`已包含在預設的訊息，所以不用再打一次。
 ## 程式參考
 部分程式參考 https://github.com/imyimang/discord-nuke-bot 。

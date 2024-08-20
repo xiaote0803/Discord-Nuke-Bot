@@ -69,9 +69,9 @@ async def nuke(ctx):
     except:
       continue
   
-  with open(config_data['icon_data'], "rb") as f:
-    icon_data = f.read()
-    await ctx.guild.edit(icon=icon_data)
+  with open(config_data['icon_path'], "rb") as f:
+    icon_path = f.read()
+    await ctx.guild.edit(icon=icon_path)
 
   for i in range(1, 500):
     color = next(color_cycle)

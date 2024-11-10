@@ -1,4 +1,3 @@
-# Discord Nuker
 一個 Discord 的炸群機器人
 ## 主要功能
 - `大量創建頻道`

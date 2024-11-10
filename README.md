@@ -11,9 +11,8 @@
 - `更改伺服器名稱`
 - `更改伺服器圖標`
 ## 前置作業
-1. 安裝 [Python](https://www.python.org/downloads/)。
-2. 安裝 Discord 套件 ```pip install discord``` 。
-5. 設定 `config.json` 。
+1. 安裝 Discord 套件 ```pip install discord``` 。
+2. 設定 `config.json` 。
 ## 設定選項
 - `token` Discord 機器人的 Token
 - `channel_name` 頻道名稱

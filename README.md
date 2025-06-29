@@ -51,6 +51,7 @@ python3 bot.py
 ## Notes
 
 - Please ensure the bot has administrator permissions in the target server
+- Place the bot's role as high as possible in the role hierarchy
 - Use lowercase when setting channel names
 
 ## Disclaimer

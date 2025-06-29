@@ -4,6 +4,7 @@ A powerful Discord server nuking bot
 
 ## Features
 
+- Ban other bots
 - Mass delete roles
 - Mass delete channels
 - Mass delete stickers
@@ -47,7 +48,7 @@ python3 bot.py
 !nuke server_id
 ```
 
-## Important Notes
+## Notes
 
 - Please ensure the bot has administrator permissions in the target server
 - Use lowercase when setting channel names

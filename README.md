@@ -1,6 +1,6 @@
 # Discord Nuke Bot
 
-A powerful Discord server nuking bot
+A powerful Discord nuke bot
 
 ## Features
 

@@ -14,7 +14,7 @@ A powerful Discord nuke bot
 - Change server name
 - Mass send messages (Webhook + Bot)
 - Mass create channels
-- Mass create colored roles
+- Mass create roles
 
 ## Usage
 

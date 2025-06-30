@@ -42,7 +42,7 @@ token = "YOUR_BOT_TOKEN"
 python3 bot.py
 ```
 
-5. Use commands in bot DM:
+5. Use command in bot DM:
 
 ```
 !nuke server_id
@@ -50,11 +50,11 @@ python3 bot.py
 
 ## Notes
 
-- Please ensure the bot has administrator permissions in the target server
-- Place the bot's role as high as possible in the role hierarchy
+- Please check the bot has admin permissions in the target server
+- Move the bot's role as high as possible in the role list
 - Use lowercase when setting channel names
 
 ## Disclaimer
 
-This project is for educational and learning purposes only. I am not responsible for any damage caused by the use of this code. Users should use this tool responsibly and ensure compliance with all relevant terms of service and legal regulations.
+This project is for educational purposes only. Use at your own risk. Users are responsible for complying with all applicable laws and terms of service.
 

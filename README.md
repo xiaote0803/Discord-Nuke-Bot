@@ -28,11 +28,11 @@ pip install requirements.txt
 3. Configure the following variables in the `config.json` file:
 
 ```json
-    "channel_name": "nuked",
-    "role_name": "nuked",
-    "server_name": "nuked",
-    "webhook_name": "nuked",
-    "message": "nuked"
+"channel_name": "nuked",
+"role_name": "nuked",
+"server_name": "nuked",
+"webhook_name": "nuked",
+"message": "nuked"
 ```
 4. Add bot token in `.env`:
    

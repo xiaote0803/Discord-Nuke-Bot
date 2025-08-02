@@ -12,7 +12,7 @@ A powerful Discord nuke bot
 - Delete server templates
 - Delete server icon
 - Change server name
-- Mass send messages (Webhook + Bot)
+- Mass send messages
 - Mass create channels
 - Mass create roles
 
@@ -25,24 +25,28 @@ A powerful Discord nuke bot
 pip install requirements.txt
 ```
 
-3. Configure the following variables in the `bot.py` file:
+3. Configure the following variables in the `config.json` file:
 
-```python
-channel_name = "CHANNEL_NAME"
-role_name = "ROLE_NAME"
-server_name = "SERVER_NAME"
-webhook_name = "WEBHOOK_NAME"
-message = "MESSAGE_CONTENT"
-token = "YOUR_BOT_TOKEN"
+```json
+    "channel_name": "nuked",
+    "role_name": "nuked",
+    "server_name": "nuked",
+    "webhook_name": "nuked",
+    "message": "nuked"
+```
+4. Add bot token in `.env`:
+   
+```
+TOKEN = "Your Bot Token"
 ```
 
-4. Run the bot:
+5. Run the bot:
 
 ```bash
 python3 bot.py
 ```
 
-5. Use command in bot DM:
+6. Use command in bot DM:
 
 ```
 !nuke server_id

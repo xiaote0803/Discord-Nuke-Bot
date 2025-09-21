@@ -30,7 +30,7 @@ pip install requirements.txt
 
 1. `config.json` file:
 
-```json
+```python
 channel_name = "CHANNEL_NAME"
 role_name = "ROLE_NAME"
 server_name = "SERVER_NAME"

@@ -1,6 +1,10 @@
 # Discord Nuke Bot
 
-A powerful Discord nuke bot
+## Support
+
+Join our Discord server for support and updates: [Discord Link](https://discord.gg/ZBXepTXj)
+
+A powerful Discord nuke bot.
 
 ## Features
 
@@ -12,41 +16,42 @@ A powerful Discord nuke bot
 - Delete server templates
 - Delete server icon
 - Change server name
-- Mass send messages
+- Mass send messages (Webhook + Bot)
 - Mass create channels
 - Mass create roles
 
-## Usage
-
-1. Clone this repository to your local machine
-2. Install required packages:
+## Installation
 
 ```bash
 pip install requirements.txt
 ```
 
-3. Configure the following variables in the `config.json` file:
+## Configuration
+
+1. `config.json` file:
 
 ```json
-"channel_name": "nuked",
-"role_name": "nuked",
-"server_name": "nuked",
-"webhook_name": "nuked",
-"message": "nuked"
+channel_name = "CHANNEL_NAME"
+role_name = "ROLE_NAME"
+server_name = "SERVER_NAME"
+webhook_name = "WEBHOOK_NAME"
+message = "MESSAGE"
 ```
-4. Add bot token in `.env`:
-   
+
+2. `.env` file:
+
 ```
 TOKEN = "Your Bot Token"
 ```
 
-5. Run the bot:
+## Usage
 
+1. Run the bot:
 ```bash
-python3 bot.py
+python main.py
 ```
 
-6. Use command in bot DM:
+2. Use command in bot DM:
 
 ```
 !nuke server_id
@@ -61,4 +66,3 @@ python3 bot.py
 ## Disclaimer
 
 This project is for educational purposes only. Use at your own risk. Users are responsible for complying with all applicable laws and terms of service.
-

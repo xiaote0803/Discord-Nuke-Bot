@@ -2,19 +2,24 @@
 
 A powerful Discord nuke bot.
 
+## Support
+
+Join our Discord server for support and updates: [Discord Link](https://discord.gg/ZA2tcP82fq)
+
 ## Features
 
-- Ban other bots
-- Mass delete roles
-- Mass delete channels
-- Mass delete stickers
-- Mass delete emojis
+- Delete/Create roles
+- Delete/Create channels
+- Delete/Change server icon
+- Delete/Change server name
+- Delete/Change server banner (planned)
+- Delete stickers
+- Delete emojis
 - Delete server templates
-- Delete server icon
-- Change server name
-- Mass send messages (Webhook + Bot)
-- Mass create channels
-- Mass create roles
+- Ban other bots
+- Send messages (Webhook & Bot)
+- Give @everyone admin permission (planned)
+
 
 ## Installation
 

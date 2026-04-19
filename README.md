@@ -23,7 +23,7 @@ Join our Discord server for support and updates: [Discord Link](https://discord.
 - Disable Verification Level
 - Disable Content Filter
 - Disable System Channel
-
+- Use Proxy (planned)
 
 
 ## Installation

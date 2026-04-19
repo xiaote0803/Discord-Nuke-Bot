@@ -18,7 +18,12 @@ Join our Discord server for support and updates: [Discord Link](https://discord.
 - Delete server templates
 - Ban other bots
 - Send messages (Webhook & Bot)
-- Give @everyone admin permission (planned)
+- Give @everyone admin permission
+- Enable All Notifications
+- Disable Verification Level
+- Disable Content Filter
+- Disable System Channel
+
 
 
 ## Installation

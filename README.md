@@ -16,13 +16,15 @@ Join our Discord server for support and updates: [Discord Link](https://discord.
 - Delete stickers
 - Delete emojis
 - Delete server templates
-- Ban other bots
-- Send messages (Webhook & Bot)
-- Give @everyone admin permission
-- Enable All Notifications
 - Disable Verification Level
 - Disable Content Filter
 - Disable System Channel
+- Enable All Notifications
+- Send messages (webhook+bot with tts)
+- Create category (planned)
+- Ban other bots
+- Give @everyone admin permission
+
 - Use Proxy (planned)
 
 
